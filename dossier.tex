@@ -1,0 +1,115 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt, notitlepage]{report} 
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} 
+\usepackage{palatino} % Palatino font
+\linespread{1.5} % A little extra line spread is better for the Palatino font
+%\usepackage{helvet} % Helvetica font
+\renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{epstopdf}
+\usepackage{enumitem}
+\usepackage{verbatim}
+\usepackage{dblfloatfix}
+\usepackage{algpseudocode}
+\usepackage{amsmath,mathtools}
+\usepackage{graphicx} %
+\usepackage{sidecap, caption}
+\usepackage{booktabs,longtable}
+\usepackage{subcaption}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{graphicx} % Required for including images
+\usepackage{booktabs} % Nice rules in tables
+\usepackage{wrapfig} % Required for text to wrap around figures and tables
+\usepackage[labelfont=bf]{caption} % Make figure numbering in captions bold
+\usepackage[top=0.5in,bottom=0.5in,left=0.7in,right=0.7in]{geometry} % Page margins
+\usepackage[font=small,labelfont=bf]{caption}
+\pagestyle{empty} % Suppress headers and footers
+\newcommand\circled[1]{%
+  \tikz[baseline=(X.base)] 
+    \node (X) [draw, shape=circle, inner sep=-1, fill=black, text=white] {\strut \footnotesize #1};%
+}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    filecolor=magenta,      
+    urlcolor=red,
+}
+
+\usepackage{graphicx}
+\usepackage{sidecap} 
+
+\usepackage[titletoc]{appendix}
+\renewcommand{\setthesection}{\arabic{chapter}.A\arabic{section}}
+
+\RequirePackage{setspace}
+\RequirePackage{booktabs}
+\RequirePackage[tight,nice]{units}
+\RequirePackage{verbatim}
+\setcounter{tocdepth}{1}
+\pagestyle{plain}
+
+\usepackage[pagestyles]{titlesec}
+\titleformat{\chapter}[display]{\normalfont\bfseries}{}{0pt}{\Huge}
+\newpagestyle{mystyle}
+{\sethead[\thepage][][\chaptertitle]{}{}{\thepage}}
+\pagestyle{mystyle}
+%----------------------------------------------------------------------------------------
+
+\usepackage{pdfpages}
+
+\begin{document}
+%Front matter:
+\begin{titlepage}
+    \newgeometry{left=3cm,bottom=0.1cm,top=2.5cm}
+	\centering
+	{\textbf{ECOLE POLYTECHNIQUE FEDERALE DE LAUSANNE}} \par
+	\vspace{1 cm}
+    \vspace{1 cm}
+	\includegraphics[scale=0.6]{Figures/Logo_EPFL.pdf}\par\vspace{1cm}
+  
+	\vspace{1cm}
+	{\scshape\Large\textbf{Dossier \\ Tenure Track Assistant Professor (PATT)}\par}
+	\vspace{1 cm}
+
+    
+    Dossier submitted as part of the mid-term review by
+    \vspace{0.5 cm}
+    
+	{\large\textbf{first LAST, PhD}\par}
+	
+
+% Bottom of the page
+	\vspace{12 cm}
+	{\large \textbf{PLACE, CH | MONTH YEAR}\par}
+\end{titlepage}
+
+
+
+
+%Table of Contents
+{\hypersetup{linkcolor=black}
+\tableofcontents
+%\authorlist
+%\listoffigures
+}
+
+%Main Items needed
+\include{chapters/CV}
+\include{chapters/MajorResearchAccomplishments}
+\include{chapters/Summary of teaching duties}
+\include{chapters/Strategic goals for the second stage of the pre-tenure period}
+\include{chapters/Publication list}
+\include{chapters/CommunityService}
+\include{chapters/Appendix}
+%\include{References}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}

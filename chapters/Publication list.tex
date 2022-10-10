@@ -1,0 +1,41 @@
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by \parsep}
+\newlist{bibsection}{itemize}{3}
+\setlist[bibsection]{label=,leftmargin=\bibhang,%
+        itemindent=-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\newlist{bibenum}{enumerate}{3}
+\setlist[bibenum]{label=[\arabic*],resume,leftmargin={\bibhang+\widthof{[999]}},%
+        itemindent=0pt, %-\bibhang,
+        itemsep=\bibsep,parsep=\z@,partopsep=0pt,
+        topsep=0pt}
+\let\oldendbibenum\endbibenum
+\def\endbibenum{\oldendbibenum\vspace{-.6\baselineskip}}
+\let\oldendbibsection\endbibsection
+\def\endbibsection{\oldendbibsection\vspace{-.6\baselineskip}}
+\makeatother
+
+\chapter{Lab Publication List}
+\label{pubs}
+
+\vspace{-10mm}
+
+
+
+\section{Under Review}
+\begin{bibenum}
+\item authors, title, date, preprint link.
+\end{bibenum}
+
+\section{Peer Reviewed Journal \& Conference Publications}
+\begin{bibenum}
+
+\item authors, title, date, publication link.
+
+\textit{\textbf{LAB CONTRIBUTIONS:} who is in your lab from author list}
+
+\end{bibenum}

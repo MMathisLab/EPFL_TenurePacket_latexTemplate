@@ -22,6 +22,11 @@ A - Information forwarded to the external experts (in English)
 15. Vision about research in the field of activity.
 16. Three publications with a summary description of their importance and original character.
 
+B - Information for internal use at EPFL (in French or English)
+17. Full teaching file, including in-depth evaluations of several courses given in particular at the foundation year and Bachelor levels and supporting letters from the Section Director and the Director of the Doctoral School (c.f. definition of the teaching file in Article 10 of LEX 2.5.1: Directive concerning the evaluation and recognition of teaching at the EPFL).
+18. Managerial and organisation activities and summary of laboratory management.
+19. Experts used as references (normally 6 names with a short description of their status and relation to the candidate).
+
     
 - There is also third-party formatting included, so please see headers and obey their licensing.
 

@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} 
 \usepackage{palatino} % Palatino font
-\linespread{1.5} % A little extra line spread is better for the Palatino font
+\linespread{1.15} % A little extra line spread is better for the Palatino font
 %\usepackage{helvet} % Helvetica font
 \renewcommand*\familydefault{\sfdefault} % Use the sans serif version of the font
 \usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
@@ -26,6 +26,17 @@
 \usepackage{graphicx} % Required for including images
 \usepackage{booktabs} % Nice rules in tables
 \usepackage{wrapfig} % Required for text to wrap around figures and tables
+\usepackage{natbib}
+\usepackage{chapterbib}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{graphicx}
+
+\usepackage{fontawesome5}
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\chapter*}{\section*}{}{} % patching to make bibliography section-like 
+
 \usepackage[labelfont=bf]{caption} % Make figure numbering in captions bold
 \usepackage[top=0.5in,bottom=0.5in,left=0.7in,right=0.7in]{geometry} % Page margins
 \usepackage[font=small,labelfont=bf]{caption}
@@ -37,10 +48,12 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=red,
+    linkcolor=gray,
     filecolor=magenta,      
-    urlcolor=red,
+    urlcolor=gray,
+    citecolor=gray,
 }
+\input{math}
 
 \usepackage{graphicx}
 \usepackage{sidecap} 
@@ -79,15 +92,15 @@
 	\vspace{1 cm}
 
     
-    Dossier submitted as part of the mid-term review by
+Dossier submitted as part of the tenure review by
     \vspace{0.5 cm}
     
-	{\large\textbf{first LAST, PhD}\par}
+	{\large\textbf{FIRST LAST, PhD}\par}
 	
 
 % Bottom of the page
 	\vspace{12 cm}
-	{\large \textbf{PLACE, CH | MONTH YEAR}\par}
+	{\large \textbf{Lausanne, CH | month day year}\par}
 \end{titlepage}
 
 
@@ -125,6 +138,12 @@
 %16. Three publications with a summary description of their importance and original character.
 
 
+%B - Information for internal use at EPFL (in French or English)
+%17. Full teaching file, including in-depth evaluations of several courses given in particular at the foundation year and Bachelor levels and supporting letters from the Section Director and the Director of the Doctoral School (c.f. definition of the teaching file in Article 10 of LEX 2.5.1: Directive concerning the evaluation and recognition of teaching at the EPFL).
+% 18. Managerial and organisation activities and summary of laboratory management.
+% 19. Experts used as references (normally 6 names with a short description of their status and relation to the candidate).
+
+
 \include{chapters/1_CV}
 \include{chapters/2_Publicationlist}
 \include{chapters/3_Invitedlectures}
@@ -135,17 +154,17 @@
 \include{chapters/8_FundingRecord}
 \include{chapters/9_Collaborations}
 \include{chapters/10_Innovationtechnologytransferpatents}
-\include{chapters/11_Otherprofessionalactivities}%(editorial boards, conference organisation, etc.)
+\include{chapters/11_Otherprofessionalactivities}
 \include{chapters/12_administrativeDuties.tex}
 %% PRIMARILY FOR TENURE, not midterm: %%
 \include{chapters/13_DetailedFutureTeaching.tex}
 \include{chapters/14_DetailedResearch} 
-%\include{chapters/15_VisionoftheField}
-%\include{chapters/16_ThreePublications}
-
-
+\include{chapters/15_VisionoftheField}
+\include{chapters/16_ThreePublications}
+%B - Information for internal use at EPFL (in French or English)
 \include{chapters/17_Appendix}
-
+\include{chapters/18_organization_summaryoflab}
+\include{chapters/19_Experts_6}
 
 %----------------------------------------------------------------------------------------
 
